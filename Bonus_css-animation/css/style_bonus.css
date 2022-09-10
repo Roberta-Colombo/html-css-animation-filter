@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.sea {
+    width: 100vw;
+    height: 50vh;
+    background-color: #213172;
+}
+
+
+@keyframes animated-waves {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+
+.waves {
+    background-image: url("../img/multiplewaves.png");
+    background-size: cover;
+    height: 45vh;
+    width: 100vw;
+    animation: animated-waves 15s linear infinite;
+    margin-top: 5vh;
+}
+
+
+@keyframes octopus-entrance {
+    from {
+        transform: translateY(100vh);
+}
+    to {
+        transform: translateY(-3vh);
+    }
+}    
+
+@keyframes octopus-exit {
+    from {
+        transform: translateY(100vh);
+}
+    to {
+        transform: translateY(-3vh);
+    }
+}    
+
+.octopus {
+    height: 30%;
+    position: absolute;
+    left: 70%;
+    animation: octopus-entrance 2s ease-out, octopus-exit 3s ease-in reverse;
+    animation-delay: 0s, 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shark-entrance {
+    from {
+        transform: translateX(0vw);
+}
+    to {
+        transform: translateX(70vw);
+    }
+}  
+
+@keyframes shark-exit {
+    from {
+        transform: translateX(70vw);
+}
+    to {
+        transform: translateX(150vw);
+    }
+}  
+
+.shark {
+    position: absolute;
+    height: 30%;
+    left: -50%;
+    animation: shark-entrance 6s ease-out, shark-exit 3s ease-in;
+    animation-delay: 1s, 6s;
+    animation-fill-mode: forwards;
+}
