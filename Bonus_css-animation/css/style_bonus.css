@@ -90,6 +90,6 @@
     height: 30%;
     left: -50%;
     animation: shark-entrance 6s ease-out, shark-exit 3s ease-in;
-    animation-delay: 1s, 6s;
+    animation-delay: 1s, 7s;
     animation-fill-mode: forwards;
 }
